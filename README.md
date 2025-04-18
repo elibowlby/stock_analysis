@@ -1,4 +1,3 @@
-```markdown
 # Stock Options Ensemble Analyzer
 
 A Python-based toolkit for forecasting next‑day stock prices using multiple models and generating options trading recommendations based on technical indicators, volatility, and sentiment analysis. The project consists of two scripts:
@@ -194,5 +193,4 @@ You can adjust the batch size by editing the call in `if __name__ == "__main__":
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).  
-```
+This project is licensed under the [MIT License](LICENSE).
