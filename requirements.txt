@@ -1,0 +1,13 @@
+pandas
+numpy
+matplotlib
+yfinance
+requests
+statsmodels
+tensorflow
+arch
+scipy
+scikit‑learn
+beautifulsoup4
+tqdm
+keras
