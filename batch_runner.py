@@ -37,7 +37,7 @@ def batch_run(limit=100):
     start_time = time.perf_counter()
     tickers = []
     tickers = fetch_yahoo_trending(limit)
-    # tickers.append("AMD")
+    # tickers.append("IXHL")
     results = []
 
     try:
@@ -117,4 +117,4 @@ def batch_run(limit=100):
         return df_out
 
 if __name__ == "__main__":
-    batch_df = batch_run(100)
+    batch_df = batch_run(10)

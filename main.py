@@ -689,7 +689,7 @@ def main():
     print("\nEnsemble Model Predictions:")
     for model_name, info in details.items():
         if model_name != "refined":
-            print(f"  {model_name.upper()}: {info['pred']:.2f}")
+            print(f"  {model_name.upper()}: {info['avg']:.2f}")
     print(f"\nEnsemble Predicted Next-Day Price (average): {ensemble_pred:.2f}")
     
     print("Generating options recommendation based on ensemble forecast and sentiment...")
