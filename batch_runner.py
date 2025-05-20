@@ -37,7 +37,7 @@ def batch_run(limit=100):
     start_time = time.perf_counter()
     tickers = []
     tickers = fetch_yahoo_trending(limit)
-    # tickers.append("IXHL")
+    # tickers.append("NFE")
     results = []
 
     try:
@@ -50,7 +50,7 @@ def batch_run(limit=100):
                 # One-day ensemble prediction.
                 ensemble_pred, details = ensemble_prediction(df, n_runs=1)
 
-                # Generate options recommendation (only next-day).
+                # Generate options recommendation (only next-day)
                 rec = generate_options_recommendation(
                     ticker, df, ensemble_pred,
                     risk_free_rate=0.01, aggressive_mode=True
@@ -110,11 +110,11 @@ def batch_run(limit=100):
         df_out.to_csv("batch_analysis_results.csv", index=False)
 
         end_time = time.perf_counter()
-        elapsed = end_time - start_time
+        elapsed = (end_time - start_time) / 60
         print(f"\nCompleted batch run — results saved to batch_analysis_results.csv")
-        print(f"Total elapsed time: {elapsed:.2f} seconds")
+        print(f"Total elapsed time: {elapsed:.2f} minutes")
 
         return df_out
 
 if __name__ == "__main__":
-    batch_df = batch_run(10)
+    batch_df = batch_run(25)
